@@ -1,2 +1,1 @@
-# Java-Programming
-for edu
+# java for edu
