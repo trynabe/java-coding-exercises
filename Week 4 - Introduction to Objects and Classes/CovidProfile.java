@@ -1,56 +1,45 @@
+// Task 1
 public class CovidProfile {
+    public static int countProfile = 0;
+
     private String date;
     private String location;
     private int accumulatedCases;
     private int curedCases;
     private int deathCases;
 
-    public CovidProfile(String _date, String loc, int noACC, int noCured, int noDeath) {
-        this.date = _date;
-        this.location = loc;
-        this.accumulatedCases = noACC;
-        this.curedCases = noCured;
-        this.deathCases = noDeath;
+    public CovidProfile(String _date, String loc, int noAcc, int noCured, int noDeath){
+        date = _date;
+        location = loc;
+        accumulatedCases = noAcc;
+        curedCases = noCured;
+        deathCases = noDeath;
+        countProfile += 1;
     }
 
-    public String getLocation() {
-        return this.location;
+    public String getLocation(){return location;}
+    public int getAccCases(){return accumulatedCases;}
+    public int getCuredCases(){return curedCases;}
+    public int getDeathCases(){return deathCases;}
+
+    public void setLocation(String loc){location = loc;}
+    public void setAccCases(int acc){accumulatedCases = acc;}
+    public void setCuredCases(int cured){curedCases = cured;}
+    public void setDeathCases(int death){deathCases = death;}
+
+    public void printCovidInfo(){
+        System.out.println(location + " at " + date);
+        System.out.println("Accumulative Patient: " + accumulatedCases);
+        System.out.println("Cured Patient: " + curedCases);
+        System.out.println("Death Case: " + deathCases);
     }
 
-    public int getAccCases() {
-        return this.accumulatedCases;
-    }
-
-    public int getCuredCases() {
-        return this.curedCases;
-    }
-
-    public int getDeathCases() {
-        return this.deathCases;
-    }
-
-    public void setLocation(String loc) {
-        this.location = loc;
-    }
-
-    public void setAccCases(int value) {
-        this.accumulatedCases = value;
-    }
-
-    public void setCuredCases(int value) {
-        this.curedCases = value;
-    }
-
-    public void setDeathCases(int value) {
-        this.deathCases = value;
-    }
-
-    public void printCovidInfo() {
-        System.out.println("Date: " + this.date);
-        System.out.println("Location: " + this.location);
-        System.out.println("Accumulated Cases: " + this.accumulatedCases);
-        System.out.println("Cured Cases: " + this.curedCases);
-        System.out.println("Death Cases: " + this.deathCases);
-        System.out.println("--------------------------------");
+    public boolean isSevere(){
+        if (deathCases > 10000){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
+
