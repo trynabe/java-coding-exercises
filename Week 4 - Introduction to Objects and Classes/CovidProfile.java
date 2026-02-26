@@ -8,6 +8,7 @@ public class CovidProfile {
     private int curedCases;
     private int deathCases;
 
+    // Constructor
     public CovidProfile(){
         date = "none";
         location = "none";
@@ -16,7 +17,8 @@ public class CovidProfile {
         deathCases = 0;
         countProfile += 1;
     }
-
+    
+    // Constructor
     public CovidProfile(String _date, String loc, int noAcc, int noCured, int noDeath){
         date = _date;
         location = loc;
@@ -26,6 +28,7 @@ public class CovidProfile {
         countProfile += 1;
     }
 
+    //
     public String getLocation(){
         return location;
     }

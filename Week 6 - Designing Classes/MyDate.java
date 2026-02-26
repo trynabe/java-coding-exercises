@@ -1,13 +1,13 @@
 public class MyDate {
     // Instance Variable
-    int year;
-    int month;
-    int day;
-    int objectNumber;
+    public int year;
+    private int month;
+    private int day;
+    private int objectNumber;
 
     // Static Class Variable
-    public static int objectCounter;
-    public static String[] strMonths = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+    private static int objectCounter;
+    private static String[] strMonths = {"January","February","March","April","May","June","July","August","September","October","November","December"};
 
     // Constructors
     public MyDate(int aYear, int aMonth, int aDay){
@@ -176,7 +176,9 @@ public class MyDate {
     }
 
     public MyDate previousYear() {
-        year--;
+        if (month == 2 && day == 29)
+            day-- ;
+            year-- ;
         return this;
     }
 }
