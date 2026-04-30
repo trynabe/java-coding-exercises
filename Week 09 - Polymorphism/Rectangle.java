@@ -23,7 +23,7 @@ public class Rectangle extends Shape {
         this.width = width;
         return length * width;
     }
-
+    @Override
     public String toString() {
         return "Rectangle[length=" + length + ",width=" + width + "," + super.toString() + "]";
     }

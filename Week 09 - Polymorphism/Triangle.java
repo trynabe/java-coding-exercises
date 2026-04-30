@@ -23,7 +23,7 @@ public class Triangle extends Shape {
         this.height = height;
         return 0.5 * base * height;
     }
-
+    @Override
     public String toString() {
         return "Triangle[base=" + base + ",height=" + height + "," + super.toString() + "]";
     }
