@@ -21,7 +21,6 @@ public class OddSumCalculator {
         int number = scanner.nextInt();
 
         int sum = sumOdd(number);
-
         System.out.println("Sum of odd numbers from 1 to " + number + " is: " + sum);
 
         scanner.close();
